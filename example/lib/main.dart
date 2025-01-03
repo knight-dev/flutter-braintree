@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_braintree/flutter_braintree_betc.dart';
+import 'package:flutter_braintree/flutter_braintree.dart';
 
 void main() => runApp(
       MaterialApp(
