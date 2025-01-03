@@ -1,18 +1,6 @@
 group 'com.example.flutter_braintree'
 version '1.0'
 
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-        jcenter()
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
-    }
-}
-
 rootProject.allprojects {
     repositories {
         google()
@@ -21,8 +9,11 @@ rootProject.allprojects {
             url "https://cardinalcommerceprod.jfrog.io/artifactory/android"
             credentials {
                 username 'braintree_team_sdk'
-                password 'AKCp8jQcoDy2hxSWhDAUQKXLDPDx6NYRkqrgFLRc3qDrayg6rrCbJpsKKyMwaykVL8FWusJpp'
+                password 'cmVmdGtuOjAxOjIwMzgzMzI5Nzg6Q3U0eUx5Zzl5TDFnZXpQMXpESndSN2tBWHhJ'
             }
+        }
+        maven {
+            url 'https://oss.sonatype.org/content/repositories/snapshots/'
         }
     }
 }
@@ -30,7 +21,7 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 34
 
     if (project.android.hasProperty("namespace")) {
         namespace "com.example.flutter_braintree"
@@ -50,10 +41,11 @@ android {
 }
 
 dependencies {
-    implementation 'com.braintreepayments.api:drop-in:6.13.0'
-    implementation 'com.google.android.gms:play-services-wallet:16.0.0'
-    implementation 'androidx.appcompat:appcompat:1.4.0-alpha03'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.braintreepayments.api:drop-in:6.16.0'
+//    implementation 'com.braintreepayments.api:drop-in:6.16.1-SNAPSHOT'
+    implementation 'com.google.android.gms:play-services-wallet:19.4.0'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.0'
     components.all {
         allVariants {
             withDependencies { deps ->
