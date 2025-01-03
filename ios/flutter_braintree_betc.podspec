@@ -2,7 +2,7 @@
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
 #
 Pod::Spec.new do |s|
-  s.name             = 'flutter_braintree_betc'
+  s.name             = 'flutter_braintree'
   s.version          = '2.0.7'
   s.summary          = 'A Flutter plugin for Braintree'
   s.description      = <<-DESC
